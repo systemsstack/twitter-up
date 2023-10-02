@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { AxiosResponse } from "axios";
 
 import { AuthenticationResponse, LoginRequest } from "../../../types/auth";

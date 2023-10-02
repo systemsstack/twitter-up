@@ -44,7 +44,7 @@ const Login: FC = (): ReactElement => {
                 <TwitterIcon />
             </div>
             <Typography variant={"h4"} component={"div"}>
-                Log in to Twitter
+                Log in to HashTayg
             </Typography>
             {(errorStatus) && (
                 <Typography variant={"body1"} component={"div"} className={classes.error}>
@@ -91,7 +91,7 @@ const Login: FC = (): ReactElement => {
                 {" · "}
                 <Typography variant={"body1"} component={"span"}>
                     <Link to={ACCOUNT_SIGNIN}>
-                        Sign up for Twitter
+                        Sign up for HashTayg
                     </Link>
                 </Typography>
             </div>

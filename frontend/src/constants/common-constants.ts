@@ -10,6 +10,7 @@ export const MONTH_DAY_YEAR = " MMM dd, yyyy";
 
 // localStorage
 export const TOKEN = "token";
+export const AUTH_USER_ID_HEADER = "X-auth-user-id";
 export const SEARCH_TERMS = "searchTerms";
 export const BACKGROUND = "background";
 export const COLOR = "color";

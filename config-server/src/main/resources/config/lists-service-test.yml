@@ -6,7 +6,7 @@ spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/lists-test
         username: postgres
-        password: root
+        password: weet0383
         driverClassName: org.postgresql.Driver
     jpa:
         hibernate:
@@ -21,8 +21,8 @@ spring:
 eureka:
     client:
         service-url:
-            defaultZone: http://localhost:8761/eureka
-        fetch-registry: true
-        register-with-eureka: true
+            defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka
+        fetch-registry: false
+        register-with-eureka: false
     instance:
         hostname: localhost

@@ -1,5 +1,6 @@
 export const HOST = "http://localhost:8000";
 export const API_ENDPOINT = HOST + "/ui/v1";
+export const SOCKET_HOST = "http://localhost:8022" + "/ui/v1";
 export const WS_URL = HOST + "/websocket";
 
 // AuthApi

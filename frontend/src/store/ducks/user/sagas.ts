@@ -86,7 +86,7 @@ import {
     setMutedTweetAdditionalInfo
 } from "../tweetAdditionalInfo/actionCreators";
 import { LoadingStatus } from "../../../types/common";
-import { TOKEN } from "../../../constants/common-constants";
+import { AUTH_USER_ID_HEADER, TOKEN } from "../../../constants/common-constants";
 import { AuthenticationApi } from "../../../services/api/user-service/authenticationApi";
 import { BlockUserApi } from "../../../services/api/user-service/blockUserApi";
 import { FollowerUserApi } from "../../../services/api/user-service/followerUserApi";
@@ -108,6 +108,7 @@ export function* fetchSignInRequest({ payload }: FetchSignInActionInterface) {
         yield put(setUserLoadingStatus(LoadingStatus.LOADING));
         const response: AxiosResponse<AuthenticationResponse> = yield call(AuthenticationApi.login, payload);
         localStorage.setItem(TOKEN, response.data.token);
+        localStorage.setItem(AUTH_USER_ID_HEADER , response.data.user.id.toString());
         yield put(setUserData(response.data.user));
         payload.history.push(HOME);
     } catch (error) {
@@ -120,6 +121,7 @@ export function* fetchSignUpRequest({ payload }: FetchSignUpActionInterface) {
         yield put(setUserLoadingStatus(LoadingStatus.LOADING));
         const response: AxiosResponse<AuthenticationResponse> = yield call(RegistrationApi.endRegistration, payload);
         localStorage.setItem(TOKEN, response.data.token);
+        localStorage.setItem(AUTH_USER_ID_HEADER , response.data.user.id.toString());
         yield put(setUserData(response.data.user));
         payload.history.push({ pathname: `${PROFILE}/${response.data.user.id}`, state: { isRegistered: true } });
     } catch (error) {

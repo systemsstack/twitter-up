@@ -16,7 +16,7 @@ import static com.gmail.merikbest2015.constants.PathConstants.API_V1_TWEETS;
 import static com.gmail.merikbest2015.constants.PathConstants.IDS;
 
 @CircuitBreaker(name = TWEET_SERVICE, fallbackMethod = "defaultEmptyTweetList")
-@FeignClient(value = TWEET_SERVICE, path = API_V1_TWEETS, configuration = FeignConfiguration.class)
+@FeignClient(value = "http://localhost:8002", path = API_V1_TWEETS, configuration = FeignConfiguration.class)
 public interface TweetClient {
 
     @PostMapping(IDS)

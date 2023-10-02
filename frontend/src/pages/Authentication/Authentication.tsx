@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 import { useAuthenticationStyles } from "./AuthenticationStyles";
 import { CommunityIcon, ReplyIcon, SearchIcon } from "../../icons";
+import HashTaygIcon from "../../icons/HashTaygIcon.svg";
 import RegistrationModal from "./RegistrationModal/RegistrationModal";
 import CustomizeModal from "./CustomizeModal/CustomizeModal";
 import CreateAccountModal from "./CreateAccountModal/CreateAccountModal";
@@ -54,7 +55,7 @@ const Authentication: FC = (): ReactElement => {
             </section>
             <section className={classes.rightSide}>
                 <div className={classes.rightSideWrapper}>
-                    <TwitterIcon color="primary" className={classes.rightSideTwitterIcon} />
+                    <img width="100" src={HashTaygIcon} />
                     <Typography className={classes.rightSideTittle} variant="h4">
                         See what's happening in the world right now
                     </Typography>

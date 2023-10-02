@@ -10,6 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class TagServiceApplication {
     public static void main(String[] args) {
+        System.out.println("-----------------HElLO Tag---------");
         SpringApplication.run(TagServiceApplication.class, args);
     }
 }
